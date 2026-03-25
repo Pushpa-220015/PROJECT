@@ -1,0 +1,179 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f5f5f5;
+}
+
+/* Navbar */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(45deg, #ff4d4d, #ff1a1a);
+    color: white;
+    padding: 15px 40px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav h2 {
+    letter-spacing: 1px;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin-left: 25px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+/* Hover effect on nav */
+nav ul li a:hover {
+    color: #ffe6e6;
+    border-bottom: 2px solid white;
+}
+
+/* Hero */
+.hero {
+    text-align: center;
+    padding: 70px 20px;
+    background: linear-gradient(to right, #ffe6e6, #fff);
+}
+
+.hero h1 {
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 18px;
+    color: #555;
+}
+
+/* Food Grid Layout */
+.food-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    padding: 30px 50px;
+}
+
+/* Food Cards */
+.food-card {
+    background: white;
+    padding: 15px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 5px 12px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+/* Hover Animation */
+.food-card:hover {
+    transform: translateY(-10px) scale(1.03);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+/* Image styling */
+.food-card img {
+    width: 100%;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+/* Image zoom effect */
+.food-card:hover img {
+    transform: scale(1.08);
+}
+
+.food-card h3 {
+    margin: 12px 0 5px;
+    font-size: 18px;
+}
+
+.food-card p {
+    color: #ff4d4d;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+/* Menu Title */
+.menu-title {
+    text-align: center;
+    margin: 25px 0;
+    font-size: 28px;
+}
+
+/* Footer */
+footer {
+    background: #222;
+    color: white;
+    text-align: center;
+    padding: 25px;
+    margin-top: 40px;
+}
+
+footer h2 {
+    margin-bottom: 10px;
+}
+
+/* ------------------ */
+/* 📱 Responsive Design */
+/* ------------------ */
+
+/* Tablet */
+@media (max-width: 900px) {
+    .food-container {
+        grid-template-columns: repeat(2, 1fr);
+        padding: 20px;
+    }
+
+    nav {
+        padding: 15px 20px;
+    }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+
+    nav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav ul {
+        margin-top: 10px;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    .hero h1 {
+        font-size: 28px;
+    }
+
+    .food-container {
+        grid-template-columns: 1fr;
+        padding: 15px;
+    }
+}
